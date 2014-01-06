@@ -13,9 +13,9 @@ function sonar_scripts()
 	wp_localize_script( 'main', 'sonar_wp_data', js_variables() );
 	//wp_enqueue_script('google_map_api', '', false , null , true);
 	wp_enqueue_style("normalize" , get_template_directory_uri() . "/css/normalize.min.css");
+	wp_enqueue_style("roboto" , "http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext", array("normalize"));
 	wp_enqueue_style("main_style" , get_template_directory_uri() . "/style.css", array("normalize" , "roboto"));
 	// provvisorio
-	wp_enqueue_style("roboto" , "http://fonts.googleapis.com/css?family=Roboto&subset=latin,latin-ext", array("normalize"));
 } 
 add_action( 'wp_enqueue_scripts', 'sonar_scripts');
 
