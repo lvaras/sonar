@@ -66,21 +66,20 @@ class events {
 			'show_admin_column' => true
 			)
 		);
-		add_action('admin_enqueue_scripts', array($this , 'enqueue_script_and_styles'));
+		#add_action('admin_enqueue_scripts', array($this , 'enqueue_script_and_styles'));
 	}
 
 	// Registering custom meta box.
 	public function register_custom_meta_box()
 	{
-		
-		add_action( 'add_meta_boxes', function () {
+		add_action( 'add_meta_boxes', function ($this) {
 			add_meta_box(
-			'event_manager',	
-			'Event Information',	
-			array($this, 'render_meta_box'),
-			'events',					
-			'normal',					
-			'high'					
+				'event_manager',	
+				'Event Information',	
+				array($this, 'render_meta_box'),
+				'events',					
+				'normal',					
+				'high'					
 			);
 		}); 
 	}
