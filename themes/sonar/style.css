@@ -73,8 +73,8 @@ table,
 blockquote,
 ul,
 li {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 }
 
 input, textarea {
@@ -82,7 +82,7 @@ input, textarea {
 }
 
 img {
-	border: 0px;
+	border: 0;
 }
 
 a {
@@ -94,7 +94,7 @@ a:hover {
 } 
 
 a:focus {
-	outline: 0px solid transparent;
+	outline: 0 solid transparent;
 }
 
 hr {
@@ -102,8 +102,8 @@ hr {
 }
 
 .fix {
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	overflow: hidden;
 	clear: both;
 	border: 1px solid transparent;
@@ -126,29 +126,6 @@ a.fit_link {
 body {
 	color: #6d6e70;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .main-header {
 	width: 960px;

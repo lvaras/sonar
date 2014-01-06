@@ -8,17 +8,17 @@
         setup_postdata( $post );
         ?>
         <a href="<?php the_permalink(); ?>">
-        <div class="event">
-            <?php the_title(); ?>
-            <br/>
-            <?php echo get_post_meta( get_the_ID() , "_starting_date" , true ) ?>
-            <br/>
-            <?php echo get_post_meta( get_the_ID() , "_starting_time" , true ) ?>
-            <br/>
-            <?php echo get_post_meta( get_the_ID() , "_endind_date" , true ) ?>
-            <br/>
-            <?php echo get_post_meta( get_the_ID() , "_endind_time" , true ) ?>
-        </div>
+            <div class="event">
+                <?php the_title(); ?>
+                <br/>
+                <?php echo get_post_meta( get_the_ID() , "_starting_date" , true ) ?>
+                <br/>
+                <?php echo get_post_meta( get_the_ID() , "_starting_time" , true ) ?>
+                <br/>
+                <?php echo get_post_meta( get_the_ID() , "_endind_date" , true ) ?>
+                <br/>
+                <?php echo get_post_meta( get_the_ID() , "_endind_time" , true ) ?>
+            </div>
         </a>
     <?php endforeach; ?>
     <?php
