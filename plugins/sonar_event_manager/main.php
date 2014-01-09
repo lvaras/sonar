@@ -66,7 +66,7 @@ class events {
 			'show_admin_column' => true
 			)
 		);
-		#add_action('admin_enqueue_scripts', array($this , 'enqueue_script_and_styles'));
+		add_action('admin_enqueue_scripts', array($this , 'enqueue_script_and_styles'));
 	}
 
 	// Registering custom meta box.
