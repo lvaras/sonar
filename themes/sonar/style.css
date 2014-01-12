@@ -516,7 +516,6 @@ a img.aligncenter {
 
 /* ==========================================================================
    Media Queries
-   
    ========================================================================== */
 
 @media screen and (max-width: 959px) {
@@ -526,7 +525,7 @@ a img.aligncenter {
     }
 
     body .event:nth-child(4n) {
-        margin-right: auto;
+        margin-right: 20px;
     }
 
     body .event:nth-child(3n) {
@@ -542,11 +541,11 @@ a img.aligncenter {
     }
     
     body .event:nth-child(4n) {
-        margin-right: auto;
+        margin-right: 20px;
     }
 
     body .event:nth-child(3n) {
-        margin-right: auto;
+        margin-right: 20px;
     }
 
     body .event:nth-child(2n) {
