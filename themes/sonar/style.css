@@ -559,6 +559,10 @@ a img.aligncenter {
     .page {
     	width: 320px;
     }
+    .cont-event {
+        width: 220px;
+        margin: 0 auto;
+    }
     
     body .event:nth-child(4n) {
         margin-right: auto;  
