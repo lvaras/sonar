@@ -3,6 +3,15 @@
 // variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
+
+	var container = document.querySelector('.cont-event');
+	var msnry = new Masonry( container, {
+	  // options
+	  columnWidth: 2,
+	  itemSelector: '.event'
+	});
+	console.log(msnry);
+
 	// scripts..
 	var map_element = $("#map");
 	var map_latitude = map_element.attr("data-lat");
@@ -26,14 +35,8 @@ $(function () {
   	});
 	var geocoder = new google.maps.Geocoder();
 	codeAddress( $("#map").attr("data-address") );
+	console.log("vivo");
 
-	var container = document.querySelector('.cont-event');
-	var msnry = new Masonry( container, {
-	  // options
-	  columnWidth: 220,
-	  itemSelector: '.event'
-	});
-	
 }); /* DOM ready  */
 
 function map_controller () 
