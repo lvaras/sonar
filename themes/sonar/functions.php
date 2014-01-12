@@ -68,6 +68,10 @@ function sonar_contact_form ()
 
 add_shortcode( 'sonar_contact_form', 'sonar_contact_form' );
 
+/**
+* Gets the JS variables retrieved from database
+* @return: Array ( An array of js variables ) 
+**/
 function  js_variables () 
 {
 	return array(
@@ -84,5 +88,58 @@ class geo_array
        return self::$myArray;
     } 
 }
+
+/**
+* Get classes necessary to create custom skins
+* @return: string ( a string containing the name of the classes ) 
+**/
+function get_customization_classes() 
+{
+	return "";
+}
+
+class sonar_settings_page
+{
+	
+    private $options;
+    
+    public function __construct()
+    {
+        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
+    }
+
+    /**
+     * Add options page
+     */
+    public function add_plugin_page()
+    {
+        add_menu_page( 
+        	'Theme Options', 
+        	'Theme Options', 
+        	'manage_options', 
+        	'sonar_theme_options', 
+        	array( $this , 'my_custom_menu_page' ), 
+        	'', 
+        	90 
+        ); 
+        add_options_page(
+            'Admin', 
+            'Theme Options', 
+            'manage_options', 
+            'my-setting-admin', 
+            array( $this, 'create_admin_page' )
+        );
+    }
+
+    public function my_custom_menu_page()
+    {
+    	echo "<h1>Theme Options</h1>";
+    }
+
+}
+
+new sonar_settings_page ();
+
+
 
 

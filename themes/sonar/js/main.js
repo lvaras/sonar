@@ -1,9 +1,9 @@
 (function($) {
 
+// variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
 	// scripts..
-
 	var map_element = $("#map");
 	var map_latitude = map_element.attr("data-lat");
 	var map_longitude = map_element.attr("data-long");
@@ -25,24 +25,23 @@ $(function () {
       title: 'Hello World!'
   	});
 	var geocoder = new google.maps.Geocoder();
-	codeAddress();
+	codeAddress( $("#map").attr("data-address") );
 });
 
 function map_controller () 
 {
-
 	var init = function () {
 
 	}
 }
+
 /**
-*
-* @param: 
-*
+* Gets the address and performs a GEO query to get the coordinats
+* @param: String ( the address )
 **/
-function codeAddress() 
+function codeAddress( address ) 
 {
-    var address = $("#map").attr("data-address");
+    //var address = $("#map").attr("data-address");
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
         map.setCenter(results[0].geometry.location);

@@ -138,10 +138,10 @@ function disable_footer_widgets($sidebars_widgets) {
  ****************************************************************/
 add_filter('widget_tag_cloud_args', 'wz_tag_cloud_filter', 90);
 function wz_tag_cloud_filter($args = array()) {
-$args['smallest'] = 14;
-$args['largest'] = 14;
-$args['unit'] = 'px';
-return $args;
+    $args['smallest'] = 14;
+    $args['largest'] = 14;
+    $args['unit'] = 'px';
+    return $args;
 }
 
 ?>

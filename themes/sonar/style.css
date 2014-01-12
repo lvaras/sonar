@@ -418,6 +418,11 @@ body .event:nth-child(4n) {
 	margin: 0 0 50px 0;
 }
 
+.prova {
+    border-radius: 5px;
+    transition: all .6s;
+}
+
 
 /* ==========================================================================
    Media Queries
