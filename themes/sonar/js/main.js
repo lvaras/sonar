@@ -26,7 +26,15 @@ $(function () {
   	});
 	var geocoder = new google.maps.Geocoder();
 	codeAddress( $("#map").attr("data-address") );
-});
+
+	var container = document.querySelector('.cont-event');
+	var msnry = new Masonry( container, {
+	  // options
+	  columnWidth: 220,
+	  itemSelector: '.event'
+	});
+	
+}); /* DOM ready  */
 
 function map_controller () 
 {
