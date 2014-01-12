@@ -26,27 +26,6 @@ $(function () {
   	});
 	var geocoder = new google.maps.Geocoder();
 	codeAddress();
-	function codeAddress() {
-	    var address = $("#map").attr("data-address");
-	    geocoder.geocode( { 'address': address}, function(results, status) {
-	      if (status == google.maps.GeocoderStatus.OK) {
-	        map.setCenter(results[0].geometry.location);
-	        marker = new google.maps.Marker({
-	            map: map,
-	            position: results[0].geometry.location
-	        });
-	        map.panTo(
-			// recupera la position di un marker
-			marker.getPosition()
-		);
-	      } else {
-	        alert("Geocode was not successful for the following reason: " + status);
-	      }
-	    });
-	  }
-	    
-	
-
 });
 
 function map_controller () 
@@ -55,6 +34,29 @@ function map_controller ()
 	var init = function () {
 
 	}
+}
+/**
+*
+* @param: 
+*
+**/
+function codeAddress() 
+{
+    var address = $("#map").attr("data-address");
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        map.setCenter(results[0].geometry.location);
+        marker = new google.maps.Marker({
+            map: map,
+            position: results[0].geometry.location
+        });
+        map.panTo(
+			marker.getPosition()
+		);
+      } else {
+        console.log("Geocode was not found : " + status);
+      }
+    });
 }
 
 function get_customize_map_array_grey () 

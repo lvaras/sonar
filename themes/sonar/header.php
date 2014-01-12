@@ -13,7 +13,7 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-bDm0-14-_9InjkCz1PJgoWcHibf7LfQ&sensor=true"></script>
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
     <div class="page">
 	    <header class="main-header clearfix">
 	        <div class="logo">

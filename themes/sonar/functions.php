@@ -18,7 +18,7 @@ function sonar_scripts()
 	// provvisorio
 } 
 add_action( 'wp_enqueue_scripts', 'sonar_scripts');
-
+ 	 	
 // order events from present day to future
 function events_order ($posts) 
 {

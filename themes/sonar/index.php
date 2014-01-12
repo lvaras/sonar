@@ -2,7 +2,7 @@
 
 <div class="container clearfix">
     <div class="session-box">
-        <h3>
+        <h3> 
             <span>tonight</span>
         </h3>
         <div class="down-triangle"></div>
@@ -33,7 +33,7 @@
                 <div>
                     <h2 class="event-cont-title">
                         <span class="event-title"><?php the_title(); ?></span>
-                        <span class="event-subtitle"> e varas pulisce tutto con la lingua</span>
+                        <span class="event-subtitle"><?php echo get_post_meta( get_the_id() , '_event_subtitle', true ); ?></span>
                     </h2>
                     <div class="event-ribbon">
                         <div class="event-date">
