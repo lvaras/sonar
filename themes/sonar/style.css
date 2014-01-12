@@ -75,6 +75,7 @@ ul,
 li {
 	margin: 0;
 	padding: 0;
+	-webkit-font-smoothing: antialiased;
 }
 
 input, textarea {
@@ -295,6 +296,7 @@ body .event:nth-child(4n) {
     background-color: #485457;
     overflow: hidden;
     /* Rotate div */
+    -webkit-backface-visibility: hidden;
     transform:rotate(-2deg);
     -ms-transform:rotate(-2deg); /* IE 9 */
     -webkit-transform:rotate(-2deg); /* Safari and Chrome */
