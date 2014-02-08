@@ -2,10 +2,12 @@
 
 <div class="container clearfix">
     <div class="session-box">
-        <h3> 
-            <span>tonight</span>
+        <h3>
+            <span>Tonight</span>
         </h3>
+        <div class="graphic-line"></div>
         <div class="down-triangle"></div>
+        <div class="graphic-line"></div>
     </div>
     <div class="slider">
         <div class="slider-box">
@@ -20,7 +22,9 @@
         <h3>
             <span>upcoming events</span>
         </h3>
+        <div class="graphic-line"></div>
         <div class="down-triangle"></div>
+        <div class="graphic-line"></div>
     </div>
     <div class="cont-event clearfix">
         <?php
