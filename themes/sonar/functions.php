@@ -100,20 +100,21 @@ function get_customization_classes()
 	return "";
 }
 
-class sonar_settings_page
+class options_page_controller
 {
 	
-    private $options;
+    private $settings;
     
-    public function __construct()
+    public function __construct( $settings = array() )
     {
+        $this->settings = $settings;
         add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
     }
 
     /**
      * Add options page
      */
-    public function add_plugin_page()
+    public function menu_page(  )
     {
         add_menu_page( 
         	'Theme Options', 
@@ -124,23 +125,34 @@ class sonar_settings_page
         	'', 
         	90 
         ); 
-        add_options_page(
-            'Admin', 
-            'Theme Options', 
+    }
+
+    public function submenu_page ( $submenu_page_settings )
+    {
+        add_submenu_page(
+            'sonar_theme_options',
+            'Opzioni Visive', 
+            'Opzioni Visive', 
             'manage_options', 
-            'my-setting-admin', 
-            array( $this, 'create_admin_page' )
+            'my-custom-submenu-page',
+            array( $this, 'my_custom_submenu_page_callback' )
         );
     }
 
-    public function my_custom_menu_page()
+
+    private function my_custom_menu_page()
     {
-    	echo "<h1>Theme Options</h1>";
+    	echo "<h1>Theme Options principale</h1>";
+    }
+
+    private function my_custom_submenu_page_callback()
+    {
+        echo "<h1>Theme Options secondaria</h1>";
     }
 
 }
 
-new sonar_settings_page ();
+// new sonar_settings_page ();
 
 
 
