@@ -3,7 +3,9 @@
 // variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
-	$("body").backstretch('wp-content/themes/sonar/img/sonar_bg.jpg');
+	if( !$('body').hasClass('sonar-light') ) {
+		$("body").backstretch('wp-content/themes/sonar/img/sonar_bg.jpg');
+	}
 
 	// Inizializzo mappa
 	map_controller = new map_controller();

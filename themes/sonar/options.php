@@ -38,8 +38,8 @@ function optionsframework_options() {
 
 	// Theme Skins
 	$theme_skins = array(
-		'one' => __('Light', 'sonar-light'),
-		'two' => __('Dark', 'sonar-dark')
+		'sonar-light' => __('Light', 'sonar-light'),
+		'sonar-dark' => __('Dark', 'sonar-dark')
 	);
 
 	// Multicheck Array
@@ -115,7 +115,7 @@ function optionsframework_options() {
 	$options[] = array(
 		'name' => __('Input Select Small', 'options_framework_theme'),
 		'desc' => __('Dark or Light', 'options_framework_theme'),
-		'id' => 'dark_light',
+		'id' => 'theme_skin',
 		'std' => 'three',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
