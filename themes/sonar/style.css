@@ -103,7 +103,10 @@ input, textarea {
 	width: 960px;
 	padding: 0 50px;
 	margin: 0 auto;
-	/* RGBa with 0.6 opacity */
+}
+
+.sonar-dark .page-sonar  {
+    /* RGBa with 0.6 opacity */
     background-color: rgba(255, 255, 255, 0.8);
     /* For IE 5.5 - 7*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff00, endColorstr=#ffffff00);
@@ -154,8 +157,11 @@ a.fit_link {
 }
 
 body {
-    background-color: #2b3233;
 	color: #6d6e70;
+}
+
+body.sonar-dark {
+    background-color: #2b3233;
 }
 
 .main-header {

@@ -28,7 +28,7 @@
 		  
             <?php if ( has_post_thumbnail() ) { ?>
 				<div class="cont-img-post-1">
-				    <?php the_post_thumbnail( array("220","220") ); ?>
+				    <?php the_post_thumbnail( "square-blog-thumb" ); ?>
 				</div> 
             <?php } ?>  
             
@@ -62,7 +62,7 @@
 		  
             <?php if ( has_post_thumbnail() ) { ?>
 				<div class="cont-img-post-2">
-				    <?php the_post_thumbnail( array("100%","auto") ); ?>
+				    <?php the_post_thumbnail( 'square-blog-thumb' ); ?>
 				</div>
             <?php } ?>  
             
@@ -121,7 +121,6 @@
                                                              		
             </div><!-- .event-widgets-col-->
             
-            	
         </div><!-- .event-widgets-col-->     
     */ ?> 
     </div><!-- .cont-widgets--> 

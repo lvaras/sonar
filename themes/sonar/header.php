@@ -13,7 +13,7 @@
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-bDm0-14-_9InjkCz1PJgoWcHibf7LfQ&sensor=true"></script>
         <?php wp_head(); ?>
     </head>
-    <body <?php body_class( get_customization_classes() ); ?> >
+    <body <?php body_class( get_customization_classes() . 'sonar-dark' ); ?> >
     <div class="page-sonar clearfix">
 	    <header class="main-header clearfix">
 	        <div class="logo">

@@ -3,9 +3,11 @@
 // variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
+	$("body").backstretch('wp-content/themes/sonar/img/sonar_bg.jpg');
+
 	// Inizializzo mappa
-	map_controller = new map_controller()
-	map_controller.init()
+	map_controller = new map_controller();
+	map_controller.init();
 
 	var msnry_container = document.querySelector('.cont-event');
 	if(msnry_container !== null)
@@ -47,7 +49,6 @@ function map_controller ()
 	    	} , 
 		    function(results, status) 
 		    {
-		    	console.log(results)
 		      if (status == google.maps.GeocoderStatus.OK) 
 		      {
 		      	var map_options = {
