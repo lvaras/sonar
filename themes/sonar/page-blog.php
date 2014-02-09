@@ -1,9 +1,7 @@
 <?php get_header();
 	/*
-	
-	 *Template Name: Blog + widget
-	 *Description: Blog with lateral widget
-	
+	 * Template Name: Blog + widget
+	 * Description: Blog with lateral widget
 	*/
 ?>
 
@@ -30,16 +28,25 @@
 		  
             <?php if ( has_post_thumbnail() ) { ?>
 				<div class="cont-img-post-1">
-				    <?php the_post_thumbnail(); ?>
-				</div>
+				    <?php the_post_thumbnail( array("220","220") ); ?>
+				</div> 
             <?php } ?>  
             
             <div class="cont-text-post-1">
                 <h3 class="title-post-1"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><?php the_title(); ?> <span class="title-2-post-1">titolo2</span></a></h3>
                 <div class="cont-info-post-1 clearfix">
-                    <div class="autor-post-1"><span class="ico-autor-post"></span><span><?php the_author(); ?></span></div>
-                     <div class="date-post-1"><span class="ico-date-post"></span><span><?php the_date(); ?></span></div>
-                    <div class="comment-post-1"><span class="ico-comment-post"></span><span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span></div> 
+                    <div class="autor-post-1">
+                        <span class="ico-autor-post"></span>
+                        <span><?php the_author(); ?></span>
+                    </div>
+                    <div class="date-post-1">
+                        <span class="ico-date-post"></span>
+                        <span><?php the_date(); ?></span>
+                    </div>
+                    <div class="comment-post-1"> 
+                        <span class="ico-comment-post"></span>
+                        <span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span>
+                    </div> 
                 </div>
                 <div class="cont-content-post-1">
                     <?php the_content(); ?>
@@ -55,7 +62,7 @@
 		  
             <?php if ( has_post_thumbnail() ) { ?>
 				<div class="cont-img-post-2">
-				    <?php the_post_thumbnail(); ?>
+				    <?php the_post_thumbnail( array("100%","auto") ); ?>
 				</div>
             <?php } ?>  
             
@@ -80,9 +87,15 @@
     </div>
     
     <div class="cont-widget">
-    
+    <?php get_sidebar(); ?>
+    <?php /*
+        ------------------------------------------
+        - TEMPLATE DEL WIDGET SVILUPPATO DA UZZO -
+        ------------------------------------------
         <div id="events-widget" class="widget list-nav events-widget">
-            <div class="sidebarnav"><h3>Upcoming <span class="second-widget-title">Events</span> </h3></div>
+            <div class="sidebarnav">
+                <h3>Upcoming <span class="second-widget-title">Events</span> </h3>
+            </div>
 
             <div class="widgets-col">
 
@@ -110,9 +123,9 @@
             
             	
         </div><!-- .event-widgets-col-->     
-        
+    */ ?> 
     </div><!-- .cont-widgets--> 
-
+    
 </div>
 
 <?php get_footer(); ?>
