@@ -948,10 +948,20 @@ body .event:nth-child(4n) {
 
 .widgets-col-fw {
     float: left;
-    width: 220px;
+    width: 300px;
     margin-right: 20px;
 }
 
+.widgets-col-fw .event-w-title {
+    width: 200px;
+    display: table;
+}
+
+.widgets-col-fw .event-w-title a {
+    padding: 20px 15px;
+    display: table-cell;
+    vertical-align: middle;
+}
 
 /* ========================= WIDGET ======================================== */
 
