@@ -938,6 +938,17 @@ body .event:nth-child(4n) {
 
 /* ========================= WIDGET-FULL WIDTH ======================================== */
 
+.widgets-col-fw {
+    float: left;
+    width: 300px;
+    margin-right: 20px;
+}
+
+.second-widget-title-fw {
+    font-family: 'Roboto' !important;
+    font-weight: 100;       
+}
+
 .event-widgets-fw {
     margin-bottom: 20px;
     -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
@@ -946,22 +957,60 @@ body .event:nth-child(4n) {
     background-color: #374042;
 }
 
-.widgets-col-fw {
-    float: left;
-    width: 300px;
-    margin-right: 20px;
-}
-
-.widgets-col-fw .event-w-title {
-    width: 200px;
-    display: table;
-}
-
-.widgets-col-fw .event-w-title a {
-    padding: 20px 15px;
+.event-w-data-fw {
     display: table-cell;
     vertical-align: middle;
+    width: 100px;
+    padding: 20px 0;
+	height: 60px; 
+    text-align: center;
 }
+
+.event-w-title-fw {
+    display: table-cell;
+    vertical-align: middle;
+    width: 200px;
+    background-color: white;   
+}
+
+.event-w-title-fw a {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 15px 15px;
+    font-family: 'Roboto' !important;
+    color: #7c8e93;
+    font-weight: 900;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.429;
+    text-decoration: none;
+}
+
+.event-w-subtitle-fw {
+    font-family: 'Roboto' !important;
+    color: #7c8e93;
+    font-weight: 100;
+    font-size: 14px;
+    text-transform: uppercase;   
+}
+
+.event-w-day-fw {
+    color: white;
+    font-size: 35px;
+    font-family: 'Roboto' !important;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.event-w-month-fw {
+    color: white;
+    font-size: 19px;
+    font-family: 'Roboto' !important;
+    font-weight: 100;
+    line-height: 1;
+    text-transform: uppercase;   
+}
+
 
 /* ========================= WIDGET ======================================== */
 
@@ -989,51 +1038,56 @@ body .event:nth-child(4n) {
 }
 
 .event-w-data {
-    float: left;
-    width: 100px;
-	min-height: 100px; 
+    display: table-cell;
+    vertical-align: middle;
+    width: 60px;
+	min-height: 60px;
+    padding: 10px 0;
     text-align: center;
 }
 
 .event-w-title {
-    float: left;
-    width: 120px;
-    min-height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    width: 160px;
+    min-height: 60px;
     background-color: white;   
 }
 
 .event-w-title a {
-    display: block;
-    padding: 25px 20px;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
     font-family: 'Roboto' !important;
     color: #7c8e93;
     font-weight: 900;
     font-size: 14px;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.429;
     text-decoration: none;
 }
 
 .event-w-subtitle{
     font-family: 'Roboto' !important;
     color: #7c8e93;
-    font-weight: 100;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 13px;
     text-transform: uppercase;   
 }
 
 .event-w-day {
+    vertical-align: middle;
     color: white;
-    font-size: 35px;
+    font-size: 25px;
     font-family: 'Roboto' !important;
     font-weight: 900;
     line-height: 1;
-    margin-top: 20px;
 }
 
 .event-w-month {
+    vertical-align: middle;
     color: white;
-    font-size: 19px;
+    font-size: 14px;
     font-family: 'Roboto' !important;
     font-weight: 100;
     line-height: 1;

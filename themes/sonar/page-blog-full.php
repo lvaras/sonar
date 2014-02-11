@@ -116,13 +116,13 @@
             <div class="widgets-col-fw">
 
                 <div class="event-widgets-fw clearfix">                                                          
-                    <div class="event-w-data">
-                        <div class="event-w-day">20</div>
-                        <div class="event-w-month"> Mar</div>
+                    <div class="event-w-data-fw">
+                        <div class="event-w-day-fw">20</div>
+                        <div class="event-w-month-fw"> Mar</div>
                     </div><!-- .event-w-data-->
-                    <div class="event-w-title"> 
+                    <div class="event-w-title-fw"> 
                         <a href="#" rel="bookmark" title="Despite Secret Guests">Despite Secret
-                            <span class="event-w-subtitle">Guests</span>
+                            <span class="event-w-subtitle-fw"> Guests</span>
                         </a>
                     </div>
                 </div><!-- .event-widgets-->
@@ -133,13 +133,13 @@
             <div class="widgets-col-fw">
 
                 <div class="event-widgets-fw clearfix">                                                          
-                    <div class="event-w-data">
-                        <div class="event-w-day">20</div>
-                        <div class="event-w-month"> Mar</div>
+                    <div class="event-w-data-fw">
+                        <div class="event-w-day-fw">20</div>
+                        <div class="event-w-month-fw"> Mar</div>
                     </div><!-- .event-w-data-->
-                    <div class="event-w-title"> 
+                    <div class="event-w-title-fw"> 
                         <a href="#" rel="bookmark" title="Despite Secret Guests">Despite Secret
-                            <span class="event-w-subtitle"> Guests</span>
+                            <span class="event-w-subtitle-fw"> Guests</span>
                         </a>
                     </div>
                 </div><!-- .event-widgets-->
