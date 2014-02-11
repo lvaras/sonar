@@ -9,7 +9,7 @@
         <div class="event-widgets clearfix">                                                          
             <div class="event-w-data">
                 <div class="event-w-day">20</div>
-                <div class="event-w-month"> Mar</div>
+                <div class="event-w-month">Mar</div>
             </div><!-- .event-w-data-->
             <div class="event-w-title"> <a href="#" rel="bookmark" title="Despite Secret Guests">Despite Secret<span class="event-w-subtitle"> Guests</span></a></div>
         </div><!-- .event-widgets-->
@@ -23,7 +23,11 @@
                 <div class="event-w-day">20</div>
                 <div class="event-w-month"> Mar</div>
             </div><!-- .event-w-data-->
-            <div class="event-w-title"> <a href="#" rel="bookmark" title="Despite Secret Guests">Despite <span class="event-w-subtitle"> Guests</span></a></div>
+            <div class="event-w-title"> 
+                <a href="#" rel="bookmark" title="Despite Secret Guests">Despite 
+                    <span class="event-w-subtitle"> Guests</span>
+                </a>
+            </div>
         </div><!-- .event-widgets-->
                                                      		
     </div><!-- .event-widgets-col-->

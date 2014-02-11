@@ -104,76 +104,30 @@ function get_customization_classes()
 	return "";
 }
 
-class options_page_controller
-{
-	
-    private $settings;
-    
-    public function __construct( $settings = array() )
-    {
-        $this->settings = $settings;
-        add_action( 'admin_menu', array( $this, 'add_plugin_page' ) );
-    }
+// Adding sidebar to the theme.
+register_sidebar( 
+    array(
+        'name' => __( 'Primary Widget Area', 'twentyten' ),
+        'id' => 'primary-widget-area',
+        'description' => __( 'The primary widget area', 'twentyten' ),
+        'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</li>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ) 
+);
 
-    /**
-     * Add options page
-     */
-    public function menu_page(  )
-    {
-        add_menu_page( 
-        	'Theme Options', 
-        	'Theme Options', 
-        	'manage_options', 
-        	'sonar_theme_options', 
-        	array( $this , 'my_custom_menu_page' ), 
-        	'', 
-        	90 
-        ); 
-    }
-
-    public function submenu_page ( $submenu_page_settings )
-    {
-        add_submenu_page(
-            'sonar_theme_options',
-            'Opzioni Visive', 
-            'Opzioni Visive', 
-            'manage_options', 
-            'my-custom-submenu-page',
-            array( $this, 'my_custom_submenu_page_callback' )
-        );
-    }
-
-
-    private function my_custom_menu_page()
-    {
-    	echo "<h1>Theme Options principale</h1>";
-    }
-
-    private function my_custom_submenu_page_callback()
-    {
-        echo "<h1>Theme Options secondaria</h1>";
-    }
-
+// thumbnail theme support
+if ( function_exists( 'add_theme_support' ) ) {
+    add_theme_support( 'post-thumbnails' ); 
 }
-// Area 1, located at the top of the sidebar.
-register_sidebar( array(
-    'name' => __( 'Primary Widget Area', 'twentyten' ),
-    'id' => 'primary-widget-area',
-    'description' => __( 'The primary widget area', 'twentyten' ),
-    'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
-    'after_widget' => '</li>',
-    'before_title' => '<h3 class="widget-title">',
-    'after_title' => '</h3>',
-) );
-
-add_theme_support( 'post-thumbnails' ); 
-add_image_size( 'square-blog-thumb', 220, 220, true );
-add_image_size( 'wide-blog-thumb', 700, 220, false );
-add_image_size( 'extrawide-blog-thumb', 940, 320, true );
+// adding image sizes for thumbnails
+if ( function_exists( 'add_image_size' ) ) { 
+    add_image_size( 'square-blog-thumb', 220, 220, true );
+    add_image_size( 'wide-blog-thumb', 700, 220, false );
+    add_image_size( 'extrawide-blog-thumb', 940, 320, true );
+}
  
-
-
-// new sonar_settings_page ();
 
 
 
