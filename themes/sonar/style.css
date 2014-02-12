@@ -45,7 +45,6 @@ hr {
 }
 
 img {
-    vertical-align: middle;
     width: auto\9;
     height: auto;
     max-width: 100%;
@@ -381,7 +380,7 @@ body .event:nth-child(4n) {
 .event-date div {
 	text-align: center;
  	position: relative;
-	top: 0px; 
+	top: 0; 
     -webkit-transform: rotate(3deg); 
        -moz-transform: rotate(3deg);     
         -ms-transform: rotate(3deg);     
@@ -477,18 +476,31 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 50px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-post-1 {
     float: left;
     width: 220px;
+    overflow: hidden;
 }
 
 .cont-img-post-1 img{
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+
+.cont-img-post-1 img:hover {
+    transform: scale(1.2,1.2) rotate(7deg);
+    -webkit-transform: scale(1.2,1.2) rotate(7deg);
+    -o-transform: scale(1.2,1.2) rotate(7deg);
+    -moz-transform: scale(1.2,1.2) rotate(7deg);
 }
 
 .cont-text-post-1 {
@@ -541,9 +553,9 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 20px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-post-1 {
@@ -623,17 +635,30 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 20px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-post-2 {
     width: 100%;
-}
-
+    overflow: hidden;
+}    
+    
 .cont-img-post-2 img{
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+
+.cont-img-post-2 img:hover {
+    transform: scale(1.2,1.2) rotate(7deg);
+    -webkit-transform: scale(1.2,1.2) rotate(7deg);
+    -o-transform: scale(1.2,1.2) rotate(7deg);
+    -moz-transform: scale(1.2,1.2) rotate(7deg);
 }
 
 .cont-text-post-2 {
@@ -711,18 +736,32 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 20px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-fw-post-1 {
     float: left;
     width: 220px;
+    overflow: hidden;
+    position: relative;
 }
-
+    
 .cont-img-fw-post-1 img{
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.cont-img-fw-post-1:hover img {
+    transform: scale(1.2,1.2) rotate(7deg);
+    -webkit-transform: scale(1.2,1.2) rotate(7deg);
+    -o-transform: scale(1.2,1.2) rotate(7deg);
+    -moz-transform: scale(1.2,1.2) rotate(7deg);
 }
 
 .cont-text-fw-post-1 {
@@ -775,9 +814,9 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 20px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-fw-post-1 {
@@ -856,17 +895,30 @@ body .event:nth-child(4n) {
 	width: 100%;
 	margin: 0 40px 50px 0;
 	background-color: white;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 .cont-img-fw-post-2 {
     width: 100%;
-}
-
+    overflow: hidden;
+}    
+    
 .cont-img-fw-post-2 img{
     width: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease; 
+}
+
+.cont-img-fw-post-2 img:hover {
+    transform: scale(1.2,1.2) rotate(7deg);
+    -webkit-transform: scale(1.2,1.2) rotate(7deg);
+    -o-transform: scale(1.2,1.2) rotate(7deg);
+    -moz-transform: scale(1.2,1.2) rotate(7deg);
 }
 
 .cont-text-fw-post-2 {
@@ -951,9 +1003,9 @@ body .event:nth-child(4n) {
 
 .event-widgets-fw {
     margin-bottom: 20px;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #374042;
 }
 
@@ -1031,9 +1083,9 @@ body .event:nth-child(4n) {
 
 .event-widgets {
     margin-bottom: 20px;
-    -webkit-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-       -moz-box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
-            box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+       -moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #374042;
 }
 
@@ -1189,7 +1241,7 @@ a img.aligncenter {
    Media Queries
    ========================================================================== */
 
-@media screen and (max-width: 959px) {
+@media screen and (max-width: 1060px) {
 
     .page-sonar {
     	width: 700px;
@@ -1205,10 +1257,11 @@ a img.aligncenter {
     
 }
  
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 660px) {
     
     .page-sonar {
     	width: 460px;
+    	padding: 0 30px;
     }
     
     body .event:nth-child(4n) {
@@ -1225,11 +1278,13 @@ a img.aligncenter {
     
 }
  
-@media screen and (max-width: 459px) {
+@media screen and (max-width: 520px) {
     
     .page-sonar {
     	width: 320px;
+    	padding: 0 20px;
     }
+
     .cont-event {
         width: 220px;
         margin: 0 auto;
