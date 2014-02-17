@@ -1330,7 +1330,8 @@ body .event:nth-child(4n) {
 .widget_categories li,
 .widget_pages li,
 .widget_recent_comments li,
-.widget_recent_entries li {
+.widget_recent_entries li,
+.widget_nav_menu li {
     list-style-type: none;
     color: rgba(193,220,224,0.3);
     font-size: 14px;
@@ -1341,7 +1342,8 @@ body .event:nth-child(4n) {
 .widget_categories a,
 .widget_pages a,
 .widget_recent_comments a,
-.widget_recent_entries a {
+.widget_recent_entries a,
+.widget_nav_menu a {
     display: inline-block;
     padding: 3px;
     font-family: 'Roboto' !important;
@@ -1359,7 +1361,8 @@ body .event:nth-child(4n) {
 .widget_categories a:hover,
 .widget_pages a:hover,
 .widget_recent_comments a:hover,
-.widget_recent_entries a:hover {
+.widget_recent_entries a:hover,
+.widget_nav_menu a:hover {
     color: rgba(43,50,51,1);
     background-color: rgba(193,220,224,0.8);
 }
