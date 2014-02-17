@@ -106,7 +106,7 @@ input, textarea {
 
 .sonar-dark .page-sonar  {
     /* RGBa with 0.6 opacity */
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     /* For IE 5.5 - 7*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff00, endColorstr=#ffffff00);
     /* For IE 8*/
@@ -1145,6 +1145,232 @@ body .event:nth-child(4n) {
     line-height: 1;
     text-transform: uppercase;   
 }
+
+
+/* WIDGET DEFAULT WORDPRESS */
+
+.widget-title {
+    display: block;
+    color: #c1dce0;
+    margin-bottom: 10px;
+    font-family: 'Roboto' !important;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    list-style-type: none;
+}
+
+.widget-container {
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+
+/* SEARCH */
+
+.widget_search label{
+    display: block;
+    color: #c1dce0;
+    margin-bottom: 10px;
+    font-family: 'Roboto' !important;
+    font-weight: 900;
+    font-size: 22px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    list-style-type: none;   
+}
+
+.widget_search input[type="text"] {
+    padding: 5px;
+    border: none;
+    background-color: rgba(193,220,224,0.3);
+    font-family: 'Roboto' !important;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #c1dce0;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;   
+}
+
+.widget_search input[type="text"]:hover,
+.widget_search input[type="text"]:focus {
+    outline: none;
+}
+
+/* TAGCLOUD */
+
+.tagcloud a {
+    display: inline-block;
+    margin: 5px 5px 0 0;
+    padding: 5px 5px;
+    background-color: rgba(193,220,224,0.5);
+    font-family: 'Roboto' !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #2b3233;
+    font-size: 16px;
+    font-weight: 900;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.tagcloud a:hover {
+    background-color: rgba(193,220,224,1);    
+}
+
+/* CALENDAR */
+
+.widget_calendar caption {
+    color: #c1dce0;
+    margin-bottom: 10px;
+    font-family: 'Roboto' !important;
+    font-weight: 900;
+    font-size: 22px;
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.2;
+    list-style-type: none;
+}
+
+.widget_calendar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.widget_calendar th,
+.widget_calendar td,
+.widget_calendar tr {
+    padding: 0;
+    margin: 0;
+    border: 1px solid #c1dce0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.widget_calendar th {
+    color: #c1dce0;
+    font-family: 'Roboto' !important;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+.widget_calendar tr,
+.widget_calendar tr a {
+    color: #c1dce0;
+    color: rgba(193,220,224,0.8);
+    font-family: 'Roboto' !important;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: default;
+    background-color: none;
+    background-color: rgba(193,220,224,0);
+}
+
+.widget_calendar tr a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #c1dce0;
+    color: rgba(193,220,224,0.8);
+    font-family: 'Roboto' !important;
+    font-size: 16px;
+    font-weight: 100;
+    cursor: default;
+    background-color: none;
+    background-color: rgba(193,220,224,0);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.widget_calendar tr a:hover {
+    color: #2b3233;
+    background-color: #c1dce0;
+}
+
+#today,
+#today a {
+    font-weight: 900;    
+}
+
+#prev a,
+#next a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: none;
+    background-color: rgba(193,220,224,0);
+    font-family: 'Roboto' !important;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 900; 
+}
+
+#prev a:hover,
+#next a:hover {
+    background-color: rgba(193,220,224,1);
+}
+
+.widget_calendar tbody,
+.widget_calendar thead,
+.widget_calendar tfoot {
+}
+
+/* VARIOUS */
+
+.widget_meta li,
+.widget_archive li,
+.widget_categories li,
+.widget_pages li,
+.widget_recent_comments li,
+.widget_recent_entries li {
+    list-style-type: none;
+    color: rgba(193,220,224,0.3);
+    font-size: 14px;
+}
+
+.widget_meta a,
+.widget_archive a,
+.widget_categories a,
+.widget_pages a,
+.widget_recent_comments a,
+.widget_recent_entries a {
+    display: inline-block;
+    padding: 3px;
+    font-family: 'Roboto' !important;
+    font-size: 14px;
+    color: rgba(193,220,224,0.8);
+    text-decoration: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.widget_meta a:hover,
+.widget_archive a:hover,
+.widget_categories a:hover,
+.widget_pages a:hover,
+.widget_recent_comments a:hover,
+.widget_recent_entries a:hover {
+    color: rgba(43,50,51,1);
+    background-color: rgba(193,220,224,0.8);
+}
+
+.textwidget,
+.textwidget p {
+    font-family: 'Roboto' !important;
+    font-size: 16px;
+    color: white;
+}
+
 
 /* ==========================================================================
    WordPress Core
