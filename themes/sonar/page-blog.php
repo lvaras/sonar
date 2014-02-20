@@ -36,15 +36,15 @@
                 <h3 class="title-post-1"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><?php the_title(); ?> <span class="title-2-post-1">titolo2</span></a></h3>
                 <div class="cont-info-post-1 clearfix">
                     <div class="autor-post-1">
-                        <span class="ico-autor-post"></span>
+                        
                         <span><?php the_author(); ?></span>
                     </div>
                     <div class="date-post-1">
-                        <span class="ico-date-post"></span>
+                        
                         <span><?php the_date(); ?></span>
                     </div>
                     <div class="comment-post-1"> 
-                        <span class="ico-comment-post"></span>
+                        
                         <span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span>
                     </div> 
                 </div>
@@ -69,9 +69,9 @@
             <div class="cont-text-post-2">
                 <h3 class="title-post-2"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" ><?php the_title(); ?> <span class="title-2-post-2">titolo2</span></a></h3>
                 <div class="cont-info-post-2 clearfix">
-                    <div class="comment-post-2"><span class="ico-comment-post"></span><span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span></div>
-                    <div class="date-post-2"><span class="ico-date-post"></span><span><?php the_date(); ?></span></div>
-                    <div class="autor-post-2"><span class="ico-autor-post"></span><span><?php the_author(); ?></span></div> 
+                    <div class="comment-post-2"><span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span></div>
+                    <div class="date-post-2"><span><?php the_date(); ?></span></div>
+                    <div class="autor-post-2"><span><?php the_author(); ?></span></div> 
                 </div>
                 <div class="cont-content-post-2">
                     <?php the_content(); ?>

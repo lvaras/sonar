@@ -40,15 +40,15 @@
                 </h3>
                 <div class="cont-info-fw-post-1 clearfix">
                     <div class="comment-fw-post-1">
-                        <span class="ico-comment-post"></span>
+                        
                         <span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span>
                     </div>
                     <div class="date-fw-post-1">
-                        <span class="ico-date-post"></span>
+                        
                         <span><?php the_date(); ?></span>
                     </div>
                     <div class="autor-fw-post-1">
-                        <span class="ico-autor-post"></span>
+                        
                         <span><?php the_author(); ?></span>
                     </div> 
                 </div>
@@ -76,7 +76,7 @@
             <div class="cont-text-fw-post-2">
                 <div class="cont-info-fw-post-2 clearfix">
                     <div class="autor-fw-post-2">
-                        <span class="ico-autor-post"></span>
+                        
                         <span><?php the_author(); ?></span>
                     </div>
                     <div class="date-fw-post-2">
@@ -84,7 +84,7 @@
                         <span><?php the_date(); ?></span>
                     </div>
                     <div class="comment-fw-post-2">
-                        <span class="ico-comment-post"></span>
+                        
                         <span><?php comments_number( 'no Comment', 'one Comment', '% Comments'); ?></span>
                     </div>
                 </div>
