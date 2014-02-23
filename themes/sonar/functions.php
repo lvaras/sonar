@@ -227,7 +227,37 @@ function wpb_load_widget() {
 }
 add_action( 'widgets_init', 'wpb_load_widget' );
 
+// custom excerpt length
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+/**
+* Checks if a string is empty after being trimmed
+* @param: string 
+* @return: boolean  
+**/
+function trimmed_empty ($meta_value = '') 
+{
+	$meta_value = trim($meta_value);
+	return empty($meta_value) ? true : false;
+}
+
+/**
+* Converts a meta value to a standard css class
+* if is a meta value that starts with underscore set the 
+* second parameter to tre and it will be removed
+* @param: string 
+* @param: boolean 
+* @return: string  
+**/
+function metavalue_to_class ($meta_value , $underscore = false) 
+{
+	$meta_value = substr($meta_value, 1); 
+	$meta_value = str_replace('_' , '-', $meta_value );
+	return $meta_value;
+}
 
 
 
