@@ -9,7 +9,14 @@
         <title><?php wp_title(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-
+		<?php 
+        $favicon_url = of_get_option('favicon');
+		if (empty($favicon_url)) {
+            $favicon_url = get_template_directory_uri().'/favicon.jpg';
+        }
+        echo '<link rel="shortcut icon" href="'.$favicon_url.'" />';
+    	
+		?>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-bDm0-14-_9InjkCz1PJgoWcHibf7LfQ&sensor=true"></script>
         <?php wp_head(); ?>
     </head>
@@ -25,22 +32,4 @@
 	            </h1>
 	        </div>
 	        <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
-	        <?php /*
-	        <div class="menu">
-	            <ul class="clearfix">
-	                <li>
-	                    <a href="#">events</a>
-	                </li>
-	                <li>
-	                    <a href="#">blog</a>
-	                </li>
-	                <li>
-	                    <a href="#">about</a>
-	                </li>
-	                <li>
-	                    <a href="#">contact</a>
-	                </li>
-	            </ul>
-	        </div>
-	        */ ?>
 	    </header>
