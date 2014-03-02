@@ -19,7 +19,7 @@
 	        <div class="logo">
 	            <h1>
 	                <a href="<?php echo get_site_url(); ?>" title="<!-- °°°°°°°°°°°°°°° -->" class="fit_link">
-		                <img src="<?php bloginfo("template_directory"); ?>/img/logo_header.png" src="<!-- °°°°°°°°°°°°°°° -->" />
+		                <img src="<?php echo of_get_option('logo') ?>" alt="<!-- °°°°°°°°°°°°°°° -->" />
 		                <span class="hidden"><!-- °°°°°°°°°°°°°°° --></span>
 	                </a>
 	            </h1>

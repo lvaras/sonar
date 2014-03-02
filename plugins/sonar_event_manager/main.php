@@ -8,6 +8,7 @@
  * Author URI: http://www.creativemuffin.it/lnz.varas
  * License: GPL2
  */
+
 // creating events custom post type
 class events {
 

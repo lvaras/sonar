@@ -113,13 +113,20 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Input Select Small', 'options_framework_theme'),
+		'name' => __('Theme Skin', 'options_framework_theme'),
 		'desc' => __('Dark or Light', 'options_framework_theme'),
 		'id' => 'theme_skin',
 		'std' => 'three',
 		'type' => 'select',
 		'class' => 'mini', //mini, tiny, small
 		'options' => $theme_skins
+	);
+
+	$options[] = array(
+		'name' => __('Upload You logo!', 'options_framework_theme'),
+		'desc' => __('Upload the logo that will be displayed on your website.', 'options_framework_theme'),
+		'id' => 'logo',
+		'type' => 'upload'
 	);
 
 	// $options[] = array(
