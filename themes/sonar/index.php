@@ -1,14 +1,5 @@
 <?php get_header(); ?>
-
-<div class="container clearfix">
-    <div class="session-box">
-        <h3>
-            <span>Tonight</span>
-        </h3>
-        <div class="graphic-line"></div>
-        <div class="down-triangle"></div>
-        <div class="graphic-line"></div>
-    </div>
+<div class="page-sonar clearfix">
     <div class="slider">
         <div class="slider-box">
             <a class="slide fit_link" href="#" title="<!-- 같같같같 -->">
@@ -18,65 +9,29 @@
             </a>
         </div>
     </div>
-    <div class="session-box">
-        <h3>
-            <span>upcoming events</span>
-        </h3>
-        <div class="graphic-line"></div>
-        <div class="down-triangle"></div>
-        <div class="graphic-line"></div>
-    </div>
-    <div class="cont-event clearfix">
+</div>
+<div class="page-sonar-wall clearfix">
+    <div class="cont-wall clearfix">
         <?php
         $posts = get_posts( home_page_query() );
         events_order($posts);
         foreach ($posts as $post) : 
             setup_postdata( $post );
             ?>
-            <a class="event" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                <div>
-                    <h2 class="event-cont-title">
-                        <span class="event-title"><?php the_title(); ?></span>
-                        <span class="event-subtitle"><?php echo get_post_meta( get_the_id() , '_event_subtitle', true ); ?></span>
-                    </h2>
-                    <div class="event-ribbon">
-                        <div class="event-date">
-                            <div>
-                                <span class="event-mounth">apr</span>
-                                <span class="event-day">23</span>
-                            </div>
-                        </div>
-                    </div>
-                    <?php if ( has_post_thumbnail() ) { ?>
-                        <div class="event-img" >
-                            <?php the_post_thumbnail(); ?>
-                        </div>
-                    <?php } ?>
-                    <div class="event-info" >
-                        <ul class="event-list">
-                            <li>
-                                <span class="event-list-title">Open</span>
-                                <span class="event-list-info">: <?php echo get_post_meta( get_the_ID() , "_starting_time" , true ) ?></span>
-                            </li>
-                            <li>
-                                <span class="event-list-title">Close</span>
-                                <span class="event-list-info">: <?php echo get_post_meta( get_the_ID() , "_endind_time" , true ) ?></span>
-                            </li>
-                            <li>
-                                <span class="event-list-title">Starting date</span>
-                                <span class="event-list-info">: <?php echo get_post_meta( get_the_ID() , "_starting_date" , true ) ?></span>
-                            </li>
-                            <li>
-                                <span class="event-list-title" >Endind date</span>
-                                <span class="event-list-info">: <?php echo get_post_meta( get_the_ID() , "_endind_time" , true ) ?></span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="event-decription">
-                        <?php the_content('Read more...',12); ?>
-                    </div>
+            <div class="box-wall box-wall-1x box-wall-event">
+                <div class="box-wall-header">
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <?php the_post_thumbnail(); ?>
+                    </a>
+                    <span class="box-wall-date"><b>23</b> apr</span>
                 </div>
-            </a>
+                <div class="box-wall-body">
+                    <a class="box-wall-cont-title" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+                        <span class="box-wall-title"><?php the_title(); ?></span>
+                        <span class="box-wall-subtitle"><?php echo get_post_meta( get_the_id() , '_event_subtitle', true ); ?></span>
+                    </a>
+                </div>
+            </div>
         <?php endforeach; ?>
     </div>
     <?php

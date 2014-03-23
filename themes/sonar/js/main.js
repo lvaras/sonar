@@ -3,20 +3,20 @@
 // variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
-	if( !$('body').hasClass('sonar-light') ) {
-		$("body").backstretch('wp-content/themes/sonar/img/sonar_bg.jpg');
-	}
+	//if( !$('body').hasClass('sonar-light') ) {
+	//	$("body").backstretch('wp-content/themes/sonar/img/sonar_bg.jpg');
+	//}
 
 	// Inizializzo mappa
 	map_controller = new map_controller();
 	map_controller.init();
 
-	var msnry_container = document.querySelector('.cont-event');
+	var msnry_container = document.querySelector('.cont-wall');
 	if(msnry_container !== null)
 	{
 		var msnry = new Masonry( msnry_container, {
-		  columnWidth: 2,
-		  itemSelector: '.event'
+		  columnWidth: 232,
+		  itemSelector: '.box-wall'
 		});
 	}
 
@@ -37,7 +37,7 @@ function map_controller ()
 	**/
 	self.init = function () 
 	{
-		self.codeAddress( $("#map").attr("data-address") );
+	//	self.codeAddress( $("#map").attr("data-address") );
 	}
 	/**
 	* Gets the address and performs a GEO query to get the coordinats

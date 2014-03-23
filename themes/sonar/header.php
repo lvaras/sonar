@@ -14,33 +14,17 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( get_customization_classes() . of_get_option('theme_skin') ); ?> >
-    <div class="page-sonar clearfix">
-	    <header class="main-header clearfix">
-	        <div class="logo">
-	            <h1>
-	                <a href="<?php echo get_site_url(); ?>" title="<!-- °°°°°°°°°°°°°°° -->" class="fit_link">
-		                <img src="<?php bloginfo("template_directory"); ?>/img/logo_header.png" src="<!-- °°°°°°°°°°°°°°° -->" />
-		                <span class="hidden"><!-- °°°°°°°°°°°°°°° --></span>
-	                </a>
-	            </h1>
-	        </div>
-	        <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
-	        <?php /*
-	        <div class="menu">
-	            <ul class="clearfix">
-	                <li>
-	                    <a href="#">events</a>
-	                </li>
-	                <li>
-	                    <a href="#">blog</a>
-	                </li>
-	                <li>
-	                    <a href="#">about</a>
-	                </li>
-	                <li>
-	                    <a href="#">contact</a>
-	                </li>
-	            </ul>
-	        </div>
-	        */ ?>
-	    </header>
+    <div class="sonar-main-container">
+        <div class="page-sonar clearfix">
+            <header class="main-header clearfix">
+                <div class="logo">
+                    <h1>
+                        <a href="<?php echo get_site_url(); ?>" title="<!-- °°°°°°°°°°°°°°° -->" class="fit_link">
+        	                <img src="<?php bloginfo("template_directory"); ?>/img/logo_header.png" src="<!-- °°°°°°°°°°°°°°° -->" />
+        	                <span class="hidden"><!-- °°°°°°°°°°°°°°° --></span>
+                        </a>
+                    </h1>
+                </div>
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
+            </header>
+        </div>
