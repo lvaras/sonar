@@ -30,15 +30,34 @@ add_action('optionsframework_custom_scripts', 'optionsframework_custom_scripts')
 function optionsframework_custom_scripts() { ?>
 
 <script type="text/javascript">
+
 jQuery(document).ready(function() {
 
-	jQuery('#example_showhidden').click(function() {
-  		jQuery('#section-example_text_hidden').fadeToggle(400);
+	
+	jQuery('input[id*="showhidden"]').click(function() {
+		var id_input = jQuery(this).attr('id').split('_')[0];
+		jQuery('[id*="section-' + id_input + '"]').each(function (index, el) {
+			if( jQuery(el).attr('id').indexOf('texthidden') > -1 ) {
+				jQuery(el).fadeToggle(400);
+				return false;
+			}
+		});
 	});
 	
-	if (jQuery('#example_showhidden:checked').val() !== undefined) {
-		jQuery('#section-example_text_hidden').show();
-	}
+
+	jQuery('input[id*="showhidden"]').each(function (index, input) {
+		if(jQuery(input).is(':checked'))
+		{
+			var id_input = jQuery(this).attr('id').split('_')[0];
+			jQuery('[id*="section-' + id_input + '"]').each(function (index, el) {
+				console.log(jQuery(el));
+				if( jQuery(el).attr('id').indexOf('texthidden') > -1 ) {
+					jQuery(el).show();
+					return false;
+				}
+			});
+		}
+	});
 	
 });
 </script>

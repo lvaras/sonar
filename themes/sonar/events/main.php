@@ -107,7 +107,7 @@ class events {
   		}
 
 	    /* OK, its safe for us to save the data now. */
-  		$test = "";
+  		$test = '';
   	    // Sanitize user input.
   	    foreach ($_POST["event_meta"] as $input_name => $value) 
   	    {

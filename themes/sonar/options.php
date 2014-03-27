@@ -113,7 +113,7 @@ function optionsframework_options() {
 		'type' => 'heading');
 
 	$options[] = array(
-		'name' => __('Input Select Small', 'options_framework_theme'),
+		'name' => __('Theme Skin', 'options_framework_theme'),
 		'desc' => __('Dark or Light', 'options_framework_theme'),
 		'id' => 'theme_skin',
 		'std' => 'three',
@@ -121,6 +121,52 @@ function optionsframework_options() {
 		'class' => 'mini', //mini, tiny, small
 		'options' => $theme_skins
 	);
+
+	$options[] = array(
+		'name' => __('Upload Your logo!', 'options_framework_theme'),
+		'desc' => __('Upload the logo that will be displayed on your website.', 'options_framework_theme'),
+		'id' => 'logo',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
+		'name' => __('Upload Your favicon!', 'options_framework_theme'),
+		'desc' => __('Upload a file of 32 x 32 px of size.', 'options_framework_theme'),
+		'id' => 'favicon',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
+		'name' => __('Upload Your favicon for apple touch devices!', 'options_framework_theme'),
+		'desc' => __('Upload a file of 152 x 152 px of size.', 'options_framework_theme'),
+		'id' => 'favicon_apple_touch',
+		'type' => 'upload'
+	);
+
+	$options[] = array(
+		'name' => __('Check to Show a Hidden Text Input', 'options_framework_theme'),
+		'desc' => __('Click here to set event wall as default page.', 'options_framework_theme'),
+		'id' => 'events_homepage_showhidden',
+		'type' => 'checkbox');
+
+	$options[] = array(
+		'name' => __('Number of events posts in home page', 'options_framework_theme'),
+		'desc' => __('A mini text input field.', 'options_framework_theme'),
+		'id' => 'events_home_number_texthidden',
+		'std' => '10',
+		'class' => 'mini hidden',
+		'type' => 'text'
+	);
+
+	// $options[] = array(
+	// 	'name' => __('Hidden Text Input', 'options_framework_theme'),
+	// 	'desc' => __('This option is hidden unless activated by a checkbox click.', 'options_framework_theme'),
+	// 	'id' => 'example_text_hidden',
+	// 	'std' => 'Hello',
+	// 	'class' => 'hidden',
+	// 	'type' => 'text');
+
+	
 
 	// $options[] = array(
 	// 	'name' => __('Input Text Mini', 'options_framework_theme'),
@@ -209,20 +255,6 @@ function optionsframework_options() {
 	// $options[] = array(
 	// 	'name' => __('Advanced Settings', 'options_framework_theme'),
 	// 	'type' => 'heading');
-
-	// $options[] = array(
-	// 	'name' => __('Check to Show a Hidden Text Input', 'options_framework_theme'),
-	// 	'desc' => __('Click here and see what happens.', 'options_framework_theme'),
-	// 	'id' => 'example_showhidden',
-	// 	'type' => 'checkbox');
-
-	// $options[] = array(
-	// 	'name' => __('Hidden Text Input', 'options_framework_theme'),
-	// 	'desc' => __('This option is hidden unless activated by a checkbox click.', 'options_framework_theme'),
-	// 	'id' => 'example_text_hidden',
-	// 	'std' => 'Hello',
-	// 	'class' => 'hidden',
-	// 	'type' => 'text');
 
 	// $options[] = array(
 	// 	'name' => __('Uploader Test', 'options_framework_theme'),

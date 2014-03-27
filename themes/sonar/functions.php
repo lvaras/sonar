@@ -3,7 +3,11 @@
 // Costants
 define ( "SONAR_VERSION" , "1.0" ); 
 
-#get_template_part("events/main");
+// includes
+get_template_part('admin/theme_options');
+get_template_part('widgets');
+
+
 // Including a few scripts and styles.. 
 function sonar_scripts() 
 {
@@ -14,7 +18,7 @@ function sonar_scripts()
    //wp_enqueue_script('backstretch', get_template_directory_uri() . '/js/vendor/jquery.backstretch.min.js', array('jquery'), null, true);
 	wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('jquery', 'jquery-mobile', 'masonry') , SONAR_VERSION , true);
     
-	wp_localize_script( 'main', 'sonar_wp_data', js_variables() );
+	wp_localize_script( 'main', 'sonar_wp_data', js_globals() );
 	//wp_enqueue_script('google_map_api', '', false , null , true);
 	wp_enqueue_style("normalize" , get_template_directory_uri() . "/css/normalize.min.css");
 	wp_enqueue_style("jquery-mobile-css" , get_template_directory_uri() . "/css/jquery.mobile-1.4.2.min.css");
@@ -22,9 +26,6 @@ function sonar_scripts()
 	wp_enqueue_style("main_style" , get_template_directory_uri() . "/style.css", array("normalize" , "roboto", 'jquery-mobile-css'));
 	// provvisorio
 } 
-
-get_template_part('admin/theme_options');
-
 add_action( 'wp_enqueue_scripts', 'sonar_scripts');
  	 	
 // order events from present day to future
@@ -46,9 +47,10 @@ function events_order ($posts)
 // home page query parameters
 function home_page_query () 
 {
+	$number_of_posts = of_get_option('events_home_number_texthidden');
 	return array( 
         "post_type" => "events" , 
-        "posts_per_page" =>  -1 , 
+        "posts_per_page" =>  intval($number_of_posts) !== 0 ? $number_of_posts: 10, 
         'paged' => get_query_var('paged') ? get_query_var('paged') : 1 
     );
 }
@@ -80,10 +82,11 @@ add_shortcode( 'sonar_contact_form', 'sonar_contact_form' );
 * Gets the JS variables retrieved from database
 * @return: Array ( An array of js variables ) 
 **/
-function  js_variables () 
+function  js_globals () 
 {
 	return array(
 		"choosen_map" => "pale dawn"
+
 	);
 }
 
@@ -119,6 +122,21 @@ register_sidebar(
     ) 
 );
 
+// Outputs the links of normal favicon and apple touch favicon (add retina support?)
+function sonar_favicons() 
+{
+	$favicon_url = of_get_option('favicon');
+	if (empty($favicon_url)) {
+	    $favicon_url = get_template_directory_uri().'/favicon.jpg';
+	}
+	$apple_touch_favicon_url = of_get_option('favicon_apple_touch');
+	if (empty($apple_touch_favicon_url)) {
+		$apple_touch_favicon_url = get_template_directory_uri().'/apple-touch-icon-precomposed.png';
+	}
+	echo '<link rel="shortcut icon" href="'.$favicon_url.'" />';
+	echo '<link rel="apple-touch-icon" href="' . $apple_touch_favicon_url . '">';
+}
+
 // thumbnail theme support
 if ( function_exists( 'add_theme_support' ) ) {
     add_theme_support( 'post-thumbnails' ); 
@@ -130,98 +148,6 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'extrawide-blog-thumb', 940, 320, true );
 }
  
-// Creating the widget 
-class sonar_events_widget extends WP_Widget {
-
-	function __construct() {
-		parent::__construct(
-			// Base ID of your widget
-			'wpb_widget', 
-
-			// Widget name will appear in UI
-			__('SOANAR events' , 'wpb_widget_domain'), 
-
-			// Widget description
-			array( 'description' => __( 'An event resume view for your sidebar', 'events_data' ), ) 
-			);
-	}
-
-	// Creating widget front-end
-	// This is where the action happens
-	public function widget( $args, $instance ) {
-		// $title = apply_filters( 'widget_title', $instance['title'] );
-		// // before and after widget arguments are defined by themes
-		// echo $args['before_widget'];
-		// if ( ! empty( $title ) ) {
-		// 	echo $args['before_title'] . $title . $args['after_title'];
-		// }
-
-		// // This is where you run the code and display the output
-		// echo __( 'Hello, World!', 'wpb_widget_domain' );
-		// echo $args['after_widget'];
-		?>
-
-		<div id="events-widget" class="widget list-nav events-widget">
-		    <div class="sidebarnav">
-		        <h3>Upcoming <span class="second-widget-title">Events</span> </h3>
-		    </div>
-		    <?php
-	        $posts = get_posts( 
-	        	array( 
-		        "post_type" => "events" , 
-		        "posts_per_page" =>  5 
-		    	) 
-	        );
-	        events_order($posts);
-	        foreach ($posts as $post) : 
-	            setup_postdata( $post );
-            ?>
-		    <div class="widgets-col">
-	        	<div class="event-widgets clearfix">                                                          
-		        	<div class="event-w-data">
-		        		<?php $date = date_create($post->post_date); ?>
-		                <div class="event-w-day"><?php echo date_format($date, 'd'); ?></div>
-		                <div class="event-w-month"><?php echo date_format($date, 'M');  ?></div>
-		            </div><!-- .event-w-data-->
-		            <div class="event-w-title"> 
-		            	<a href="<?php echo get_permalink( $post->ID ); ?>" rel="bookmark" title="Despite Secret Guests">
-		            		<?php echo $post->post_title; ?><span class="event-w-subtitle"></span>
-		            	</a>
-		            </div>
-		        </div><!-- .event-widgets-->
-		    </div>
-		<?php endforeach; ?>
-		</div>
-
-	    <?php
-	}
-		
-// Widget Backend 
-public function form( $instance ) 
-{
-	if ( isset( $instance[ 'title' ] ) ) {
-	$title = $instance[ 'title' ];
-	}
-	else {
-	$title = __( 'New title', 'wpb_widget_domain' );
-	}
-	// Widget admin form
-	?>
-		<p>
-		<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label> 
-		<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
-		</p>
-	<?php 
-	}
-	
-	// Updating widget replacing old instances with new
-	public function update( $new_instance, $old_instance ) 
-	{
-	$instance = array();
-	$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
-	return $instance;
-	}
-} // Class wpb_widget ends here
 
 // Register and load the widget
 function wpb_load_widget() {
@@ -229,7 +155,37 @@ function wpb_load_widget() {
 }
 add_action( 'widgets_init', 'wpb_load_widget' );
 
+// custom excerpt length
+function custom_excerpt_length( $length ) {
+	return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+/**
+* Checks if a string is empty after being trimmed
+* @param: string 
+* @return: boolean  
+**/
+function trimmed_empty ($meta_value = '') 
+{
+	$meta_value = trim($meta_value);
+	return empty($meta_value) ? true : false;
+}
+
+/**
+* Converts a meta value to a standard css class
+* if is a meta value that starts with underscore set the 
+* second parameter to tre and it will be removed
+* @param: string 
+* @param: boolean 
+* @return: string  
+**/
+function metavalue_to_class ($meta_value , $underscore = false) 
+{
+	$meta_value = substr($meta_value, 1); 
+	$meta_value = str_replace('_' , '-', $meta_value );
+	return $meta_value;
+}
 
 
 
