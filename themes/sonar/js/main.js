@@ -1,5 +1,36 @@
-(function($) {
 
+(function($) {
+//Execute the function when window load
+$(window).bind("load", function() { 
+         
+       //setup the height and position for your sticky footer
+       footerHeight = 0,
+       footerTop = 0,
+       $footer = $("#footer");
+ 
+       positionFooter();
+ 
+       function positionFooter() {
+ 
+               footerHeight = $footer.height();
+                 
+               if ( ($(document.body).height()+footerHeight) > $(window).height()) {
+                   $footer.css({
+                        position: "fixed"
+                   })
+                   $("#wrapper").css('padding-bottom', footerHeight+'px');
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+ 
+       }
+ 
+       $(window)
+               .resize(positionFooter)
+ 
+});
 // variabile globale sonar_wp_data contiene variabili dal back-end
 $(function () {
 
@@ -15,7 +46,7 @@ $(function () {
 	if(msnry_container !== null)
 	{
 		var msnry = new Masonry( msnry_container, {
-		  columnWidth: 232,
+		  columnWidth: 230,
 		  itemSelector: '.box-wall'
 		});
 	}

@@ -2,7 +2,7 @@
 <div class="page-sonar clearfix">
     <div class="slider">
         <div class="slider-box">
-            <a class="slide fit_link" href="#" title="<!-- 같같같같 -->">
+            <a class="slide fit_link" href="#" title="...">
                 <img src="<?php bloginfo("template_directory"); ?>/img/slider_prova.png" src="<!-- 같같같같같같같� -->" />
                 <div class="slide-title">Varas cazzo mollo V.S. Ale ano pubblico</div>
                 <div class="slide-subtitle">Ano spazioso e viagra gratis <span class="slide-location">/ london</span></div>

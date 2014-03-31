@@ -21,7 +21,7 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( get_customization_classes() . of_get_option('theme_skin') ); ?> >
-    <div class="sonar-main-container">
+    <div id="wrapper" class="sonar-main-container">
         <div class="page-sonar clearfix">
             <header class="main-header clearfix">
                 <div class="logo">
