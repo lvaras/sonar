@@ -1,13 +1,25 @@
 <?php get_header(); ?>
 <div class="page-sonar clearfix">
     <div class="slider">
-        <div class="slider-box">
-            <a class="slide fit_link" href="#" title="...">
-                <img src="<?php bloginfo("template_directory"); ?>/img/slider_prova.png" src="<!-- °°°°°°°°°°°°°°° -->" />
-                <div class="slide-title">Varas cazzo mollo V.S. Ale ano pubblico</div>
-                <div class="slide-subtitle">Ano spazioso e viagra gratis <span class="slide-location">/ london</span></div>
-            </a>
-        </div>
+        <ul class="slider-box boxslider">
+        
+        	<li>
+	            <a class="slide fit_link" href="#" title="...">
+	                <img src="<?php bloginfo("template_directory"); ?>/img/slider_prova.png" src="<!-- °°°°°°°°°°°°°°° -->" />
+	                <div class="slide-title">Varas cazzo mollo V.S. Ale ano pubblico</div>
+	                <div class="slide-subtitle">Ano spazioso e viagra gratis <span class="slide-location">/ london</span></div>
+	            </a>
+        	</li>
+        	
+        	<li>
+	            <a class="slide fit_link" href="#" title="...">
+	                <img src="<?php bloginfo("template_directory"); ?>/img/slider_prova.png" src="<!-- °°°°°°°°°°°°°°° -->" />
+	                <div class="slide-title">Varas cazzo mollo V.S. Ale ano pubblico</div>
+	                <div class="slide-subtitle">Ano spazioso e viagra gratis <span class="slide-location">/ london</span></div>
+	            </a>
+        	</li>
+        	
+        </ul>
     </div>
 </div>
 <div class="page-sonar-wall clearfix">

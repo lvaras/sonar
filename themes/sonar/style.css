@@ -80,6 +80,9 @@ textarea {
 
 * {
     font-family: 'Roboto', Tahoma, Helvetica, sans-serif;
+
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -140,9 +143,6 @@ body.sonar-dark {
 	font-weight: 900;
 	text-shadow: none;
 	border: 1px solid transparent;
-	
-	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 	
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
@@ -225,6 +225,11 @@ body.sonar-dark {
 
 /* ========================= WALL ======================================== */
 
+.box-wall {
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.25);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.25);
+	box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.25);
+}
 
 .box-wall-1x {
     width: 220px;
@@ -232,7 +237,7 @@ body.sonar-dark {
     margin-left: 5px;
     margin-bottom: 15px;
     float: left;
-    background-color: white;
+    background-color: white; /* light */
 }
 
 .box-wall-header {
@@ -264,9 +269,14 @@ body.sonar-dark {
     padding: 0 5px;
     display: inline-block;
     background-color: white;
-    font-size: 18px; 
+    font-size: 18px;
+    font-weight: 300;
     text-transform: uppercase;
-    color: #424242;
+    color: rgba(42,42,42,1); /* light */
+}
+
+.box-wall-date b {
+    font-weight: 900;	
 }
 
 .box-wall-body {
@@ -274,7 +284,7 @@ body.sonar-dark {
 }
 
 .box-wall-title {
-    color: #424242;
+    color: rgba(42,42,42,1); /* light */
     font-size: 20px;
     font-weight: 900;
     line-height: 1.2;
@@ -282,7 +292,7 @@ body.sonar-dark {
 }
 
 .box-wall-subtitle {
-    color: #424242;
+    color: rgba(42,42,42,1); /* light */
     font-size: 20px;
     font-weight: 100;
     line-height: 1.2;
