@@ -13,15 +13,17 @@
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( get_customization_classes() . of_get_option('theme_skin') ); ?> >
-    <div class="page-sonar clearfix">
-	    <header class="main-header clearfix">
-	        <div class="logo">
-	            <h1>
-	                <a href="<?php echo get_site_url(); ?>" title="<!-- °°°°°°°°°°°°°°° -->" class="fit_link">
-		                <img src="<?php echo of_get_option('logo') ?>" alt="<!-- °°°°°°°°°°°°°°° -->" />
-		                <span class="hidden"><!-- °°°°°°°°°°°°°°° --></span>
-	                </a>
-	            </h1>
-	        </div>
-	        <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
-	    </header>
+    <div id="wrapper" class="sonar-main-container">
+        <div class="page-sonar clearfix">
+            <header class="main-header clearfix">
+                <div class="logo">
+                    <h1>
+                        <a href="<?php echo get_site_url(); ?>" title="..." class="fit_link">
+        	                <img src="<?php bloginfo("template_directory"); ?>/img/logo_versione_light.png" src="..." />
+        	                <span class="hidden"><!-- °°°°°°°°°°°°°°° --></span>
+                        </a>
+                    </h1>
+                </div>
+                <?php wp_nav_menu( array( 'theme_location' => 'header-menu') ); ?>
+            </header>
+        </div>
