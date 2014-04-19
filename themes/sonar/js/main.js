@@ -22,6 +22,7 @@ $(function () {
 
 }); /* DOM ready  */
 
+
 function map_controller () 
 {
 	var self = this;

@@ -9,15 +9,7 @@
         <title><?php wp_title(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-		<?php 
-        $favicon_url = of_get_option('favicon');
-		if (empty($favicon_url)) {
-            $favicon_url = get_template_directory_uri().'/favicon.jpg';
-        }
-        echo '<link rel="shortcut icon" href="'.$favicon_url.'" />';
-    	
-		?>
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-bDm0-14-_9InjkCz1PJgoWcHibf7LfQ&sensor=true"></script>
+		<?php sonar_favicons();	?>
         <?php wp_head(); ?>
     </head>
     <body <?php body_class( get_customization_classes() . of_get_option('theme_skin') ); ?> >
